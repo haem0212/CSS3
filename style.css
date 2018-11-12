@@ -1,0 +1,37 @@
+.header{
+	margin: 0 auto;
+	width: 600px;
+	height: 100px;
+	background: yellow;
+	position: relative;
+}
+.box1, .box2{
+	position: absolute;
+	width: 120px;
+	height: 98px;
+	transition:1s ease ; 
+}
+.box1{
+	background: red;
+	z-index: 1;
+}
+.box2{
+	background: green;
+	left: 140px;
+	z-index: 1;
+}
+ .box1:hover{
+	width: 460px;	
+}
+/* .box2:hover + .box1{
+	position: absolute;	
+	transform: rotate(360deg);
+	background: black;
+}*/
+.box1:hover + .box2{
+	position: absolute;
+	transform: rotate(360deg);
+	left: calc(100% - 120px); 
+	background: blue;
+}
+
